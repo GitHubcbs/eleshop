@@ -1,0 +1,171 @@
+.head{
+	width: 100%;
+	height: 120px;
+	position: fixed;
+	z-index: 777;
+	background-color: white;
+}
+ul{
+	list-style: none;
+}
+.logo{
+	width: 10%;
+	height: 40px;
+	float: left;
+	margin-top: 10px;
+}
+.nav1{
+	width: 70%;
+	height: 40px;
+	margin-left: 20%;
+	margin-top: 10px;
+}
+.nav2{
+	width: 100%;
+	height: 40px;
+	float: right;
+	margin-top: 30px;
+	padding-left: 60%;
+}
+.nav2 li{
+	float: left;
+}
+.nav2 li>div{
+	width: 100%;
+	height: 100%;
+	background-color: whitesmoke;
+	position: absolute;
+	z-index: 333;
+	top: 100px;
+	display: none;
+	left: 0;
+	text-align: center;
+}
+.nav2 dl{
+	width: 33.3%;
+	float: left;
+}
+.nav2 dd a{
+	color: grey;
+	font-weight: bold;
+}
+.nav2 dd a:hover{
+	color: orangered!important;
+}
+.nav2 dt{
+	color: black;
+	font-weight: bold;
+}
+.nav2 li:hover div{
+	display: block;
+	color: gray;
+	animation: nav2_div 1s;
+	backface-visibility:hidden;
+}
+.serch{
+	float: left;
+	font-size: 70%;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	width: 7%;
+	height: 30px;
+	background-color: #f00;
+	cursor: pointer;
+}
+#input-serch{
+	height: 30px;
+	width: 25%;
+	border: 1px solid gray;
+	float: left;
+	margin-left: 30%;
+}
+.nav1>a,.nav2 li{
+	color: black;
+	margin: 0px 1%;
+	font-size: 95%;
+	height: 100%;
+}
+.nav1 a:hover,.nav2 li:hover{
+	color: goldenrod;
+	cursor: pointer;
+}
+
+@keyframes nav2_div{
+	0%{height: 10%;}
+	25%{height: 100%;}
+	50%{height: 70%;}
+	100%{height: 100%;}
+}
+@keyframes nav2_div_s{
+	0%{height: 10%;}
+	25%{height: 70%;}
+	50%{height: 50%;}
+	100%{height: 70%;}
+}
+@keyframes nav2_div_f{
+	0%{height: 10%;}
+	25%{height: 80%;}
+	50%{height: 60%;}
+	100%{height: 80%;}
+}
+@media only screen and (max-width:1116px){
+	.nav2{
+		padding-left: 0;
+	}
+	.nav2 li>div{
+		height: 80%;
+		top: 105px;
+	}
+	.nav2 li:hover div{
+		animation: nav2_div_f 1s;
+	}
+}
+@media only screen and (max-width:565px ) {
+	.logo{
+		width: 100%;
+		height: 30px;
+		margin-top: 10px;
+		text-align: center;
+	}
+	.nav1{
+		width: 100%;
+		height: 30px;
+		margin-top: 50px;
+		margin-left: 0;
+		font-size: 60%;
+	}
+	.serch{
+		float: left;
+		width: 20%;
+		height: 30px;
+	}
+	#input-serch{
+		height: 30px;
+		width: 30%;
+		float: left;
+		margin-left: 0;
+	}
+	.nav2{
+		width: 100%;
+		height: 40px;
+		float: none;
+		margin-top: 10px;
+		font-size: 60%;
+	}
+	.nav2 li>div{
+		height: 70%;
+		top: 105px;
+	}
+	.nav2 dd a{
+		font-size: 10px;
+	}
+	.nav2 dt{
+		font-size: 12px;
+	}
+	.nav2 li:hover div{
+		animation: nav2_div_s 1s;
+	}
+}
